@@ -33,10 +33,10 @@ boxed input, and a sidebar that shows every agent's state.
   `graph_build`, `brain`, `agent`, `job`, `plan`.
 - **Dispatches the others.** `agent` runs `claude -p`, `codex exec` or `pi -p` headlessly and
   returns what came back; the sidebar tracks each one live.
-- **Maps the machine** (optional). If [`sg`](https://github.com/evanmotovich1-web) — a
-  systemgraph CLI — is on `PATH`, `graph` answers questions across every registered repo plus a
-  graph of the machine itself (bins, repos, jobs, MCP servers, model providers). Without it those
-  three tools simply report that no graph exists; everything else works.
+- **Maps the machine** (optional). If `sg` — a systemgraph CLI — is on `PATH`, `graph` answers
+  questions across every registered repo plus a graph of the machine itself (bins, repos, jobs,
+  MCP servers, model providers). Without it those three tools simply report that no graph exists;
+  everything else works.
 - **Remembers.** `brain` shells out to a local knowledge-vault CLI if one is installed.
 - **Modes.** `ask` is read-only; `agent` is the full operator; `dispatch` plans and delegates;
   `system` maintains the map. Mode is enforced twice — the tool schema sent to the model is
@@ -47,7 +47,7 @@ boxed input, and a sidebar that shows every agent's state.
 Requires Rust 1.75+ and a DeepSeek API key.
 
 ```bash
-git clone https://github.com/evanmotovich1-web/sa && cd sa
+git clone https://github.com/Jared-boop44234/sa && cd sa
 cargo build --release
 ln -sf "$PWD/target/release/sa" ~/.local/bin/sa      # any PATH dir
 export DEEPSEEK_API_KEY=...                          # or a key file, see below
