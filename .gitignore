@@ -1,0 +1,6 @@
+/target
+/.cargo
+/graphify-out
+*.png
+*.jpg
+.DS_Store
